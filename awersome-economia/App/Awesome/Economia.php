@@ -1,7 +1,6 @@
 <?php 
 
 namespace App\Awesome;
-
 class Economia{
 
     /**
@@ -27,6 +26,7 @@ class Economia{
      * @param integer $dias
      * @return array
      */
+    /* Metodo para consultar a cotacao */
     public function consultarUltimosFechamentos($moedaA,$moedaB,$dias = 1){
         return $this->get('/daily/'.$moedaA.'-'.$moedaB.'/'.$dias);
     }
