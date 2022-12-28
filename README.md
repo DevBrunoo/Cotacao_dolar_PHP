@@ -1,57 +1,59 @@
-# Converta o seu dinheiro para moedas estrangeiras 
-## O que e 
+# Convert your money to foreign currencies
+## Which is
 
-Esse e um repositorio criado em PHP que busca fazer conversao de dinheiro para outras moedas internacionais atraves da API AWERSOME, 
+This is a repository created in PHP that seeks to convert money to other international currencies through the AWERSOME API,
 
 
-## Como usar 
+## How to use
 
-- Para usá-lo, é necessário ter o PHP instalado em sua máquina e baixar as dependências (bibliotecas externas) listadas no arquivo autoload.php, que podem ser instaladas através do Composer (um gerenciador de dependências para PHP).
+- To use it, you need to have PHP installed on your machine and download the dependencies (external libraries) listed in the autoload.php file, which can be installed through Composer (a dependency manager for PHP).
 
-- O script pode ser executado a partir da linha de comando, passando dois argumentos que representam as moedas que deseja consultar. Por exemplo:
-- 
+- The script can be run from the command line, passing two arguments that represent the currencies you want to query. For example:
+-
 
 ```yerm
 php script.php USD BRL
 ```
 
-O script irá realizar a consulta na API e exibir os resultados de cotação das moedas para os últimos 15 dias. Cada linha representa um dia, com as informações de data, cotação de compra (bid) e cotação de venda (ask).
+The script will perform the API query and display the currency quote results for the last 15 days. Each line represents a day, with date information, purchase quote (bid) and ask quote.
 
 
-Exemplo de saída:
+Output example:
 
 
 ```yerm
-Moedas: USD -> BRL
-2022-01-01 | 3.9200 | 3.9600
-2022-01-02 | 3.9300 | 3.9700
-2022-01-03 | 3.9400 | 3.9800
-2022-01-04 | 3.9500 | 3.9900
-2022-01-05 | 3.9600 | 4.0000
+Currencies: USD -> BRL
+2022-01-01 | 3.9200 | 3,9600
+2022-01-02 | 3.9300 | 3,9700
+2022-01-03 | 3.9400 | 3,9800
+2022-01-04 | 3.9500 | 3,9900
+2022-01-05 | 3.9600 | 4,0000
 ```
-## Mais sobre como utilizar
+## More on how to use
 
-Para utilizar o script, é necessário passar dois argumentos na linha de comando, representando as moedas que deseja consultar. Por exemplo:
+To use the script, you need to pass two arguments on the command line, representing the currencies you want to query. For example:
 
 ```yerm
-php consultar-cotacao.php USD BRL
+php consult-cotacao.php USD BRL
 ```
 
-O script irá exibir a cotação das moedas USD (dólar americano) para BRL (real brasileiro) nos últimos 15 dias.
+The script will display the quotation of currencies USD (US dollar) to BRL (Brazilian real) in the last 15 days.
 
-Para funcionar corretamente, o script precisa de algumas dependências externas, que devem ser instaladas antes de utilizá-lo. Para instalar essas dependências, basta executar o seguinte comando na raiz do projeto:
+To work correctly, the script needs some external dependencies, which must be installed before using it. To install these dependencies, just run the following command in the project root:
 
 ```yerm
 composer install
 ```
 
-O script também faz uso de uma classe Economia, que deve ser implementada por você. Essa classe deve ter uma função consultarUltimosFechamentos, que deve realizar a consulta na API de cotação de moedas e retornar os resultados em um array.
+The script also makes use of an Economy class, which you must implement. This class must have a queryLastClose function, which must query the currency quote API and return the results in an array.
 
 ```yerm
-$obEconomia = new Economia;
-$dadosFechamento = $obEconomia->consultarUltimosFechamentos('USD', 'BRL', 15);
+$obEconomy = new Economy;
+$dataClosing = $obEconomia->consultLastClosings('USD', 'BRL', 15);
 ```
 
-O script exibirá a cotação das moedas consultadas, formatando os valores com a função number_format e exibindo-os na tela.
+The script will display the quotation of the consulted currencies, formatting the values with the number_format function and displaying them on the screen.
 
-Espero que esse script seja útil para você! Qualquer dúvida ou sugestão, sinta-se à vontade para entrar em contato.
+I hope this script is useful for you! Any questions or suggestions, feel free to contact us.
+
+----------------------------
